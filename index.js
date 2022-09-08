@@ -94,7 +94,9 @@ function translate() {
   languageBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       lang = btn.innerText;
-      console.log(`lang is ${lang}`);
+      // if (lang === 'Eng') {
+      //   lang = 'en';
+      // } else lang = 'ru';
       getTranslate(lang);
       changeClassActive('lang', btn);
       localStorage.setItem('lang', lang);
