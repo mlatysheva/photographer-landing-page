@@ -12,4 +12,4 @@ It has the following features:
 - An action button that opens up an email
 - Interactive portfolio section with season buttons to change photos displayed with the season chosen
 - Custom video player
-- Contact form with HTML-validation that sends an email with the email address, phone and text filled in by the user and checked by HTML validation controls 
+- Contact form with HTML-validation that sends an email throught MailThis.to API, with the email address, phone and text filled in by the user

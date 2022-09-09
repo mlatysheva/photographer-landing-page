@@ -909,7 +909,8 @@ html {
   line-height: 80px;
   color: var(--gold);
   letter-spacing: 0em;
-  width: 700px;  
+  width: 700px;
+  text-shadow: 0px 0px 10px black;
 }
 
 .input-field {
@@ -930,6 +931,7 @@ html {
   border: 1px solid white;
   color: white;
 }
+
 .textarea-field {
   resize: none;
   max-width: 100%;
@@ -950,20 +952,6 @@ html {
 .send-button {
   margin-top: 20px;
 }
-
-/* .error {
-  width  : 100%;
-  padding: 0;
-  font-size: 80%;
-  color: white;
-  background-color: #900;
-  border-radius: 0 0 5px 5px;
-  box-sizing: border-box;
-}
-
-.error.active {
-  padding: 0.3em;
-} */
 
 @media (max-width: 1400px) {
 
@@ -995,7 +983,6 @@ html {
 
 @media (max-width: 850px) {
   .contacts-section {
-    /* background-size: 1200px; */
     height: 660px;
     padding-bottom: 60px;
   }
