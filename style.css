@@ -916,21 +916,16 @@ html {
   padding: 13px;
   margin: 10px 0;
   width: 100%;
+  color: var(--gold);
   background: transparent;
   border: 1px solid var(--gold);
   font-family:inherit;
   font-size: inherit;
   box-shadow:0 0 4px rgba(223, 206, 150, 0.3);
   transition: .3s box-shadow;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.input-field:hover {
-  box-shadow:0 0 4px rgba(23, 206, 150, 0.5);
-}
-.input-field:hover {
-  border: 1px solid white;
-  color: white;
-}
+
 .input-field:focus {
   border: 1px solid white;
   color: white;
@@ -939,6 +934,10 @@ html {
   resize: none;
   max-width: 100%;
   line-height: 1.5;
+}
+
+.input-field:invalid {
+  border: 2px solid darkred;
 }
 
 ::placeholder {
@@ -951,6 +950,20 @@ html {
 .send-button {
   margin-top: 20px;
 }
+
+/* .error {
+  width  : 100%;
+  padding: 0;
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+}
+
+.error.active {
+  padding: 0.3em;
+} */
 
 @media (max-width: 1400px) {
 

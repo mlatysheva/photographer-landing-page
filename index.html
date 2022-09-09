@@ -172,10 +172,18 @@
           <h2 class="contacts-title" data-i18="contact-me">
             Contact me
           </h2>
-          <input type="email" class="input-field" placeholder="E-mail">
-          <input type="tel" class="input-field" data-i18="phone" placeholder="Phone">
-          <textarea class="input-field textarea-field" data-i18="message-text" placeholder="Message" rows="3" cols="50"></textarea>
-          <button class="button send-button gold-button pulse-button" data-i18="send-message">Send message</button>
+
+          <form name="contactForm" onsubmit="return validateForm()" action="https://mailthis.to/mlatysheva@gmail.com" method="POST">
+            <input type="text" name="name" class="input-field" placeholder="Your name" required minlength="3">
+            <div class="error" id="nameErr"></div>             
+            <input type="email" name="Email" id="email" class="input-field" placeholder="E-mail" required minlength="8">
+            <div class="error" id="emailErr"></div>
+            <input type="tel" name="phone" maxlength="10" id="tel" class="input-field" data-i18="phone" placeholder="Phone * Optional">
+            <div class="error" id="phoneErr"></div>
+            <textarea name="message" id="text-message" class="input-field textarea-field" data-i18="message-text" placeholder="Message" rows="3" cols="50" required minlength="15" maxlength="400"></textarea> 
+            <input type="submit" class="button send-button gold-button pulse-button" data-i18="send-message"value="Send message">
+            <div class="error" id="messageErr"></div>
+          </form>
         </div>
 
       </section>
@@ -200,6 +208,7 @@
   </div>
   <script type="module" src="index.js"></script>
   <script type="module" src="video.js"></script>
+  <!-- <script type="module" src="form.js"></script> -->
 
 </body>
 </html>
