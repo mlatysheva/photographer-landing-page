@@ -96,7 +96,6 @@ if (localStorage.getItem('lang')) {
 if (localStorage.getItem('theme')) {
   theme = localStorage.getItem('theme');
 } else theme = 'dark';
-console.log(`skills is : ${i18Obj.Rus.skills}`);
 
 setLocalStorage();
 changeThemOnLoad(theme);
@@ -183,10 +182,6 @@ function translate() {
   languageBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       lang = btn.innerText;
-      // if (lang === 'Eng') {
-      //   lang = 'en';
-      // } else lang = 'ru';
-      console.log(`lang: ${lang}`);
       getTranslate(lang);
       changeClassActive('lang', btn);
       localStorage.setItem('lang', lang);
