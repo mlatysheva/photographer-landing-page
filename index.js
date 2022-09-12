@@ -3,7 +3,7 @@ let lang = '';
 let theme = '';
 if (localStorage.getItem('lang')) {
   lang = localStorage.getItem('lang');
-} else lang = 'en';
+} else lang = 'Eng';
 
 if (localStorage.getItem('theme')) {
   theme = localStorage.getItem('theme');
@@ -97,6 +97,7 @@ function translate() {
       // if (lang === 'Eng') {
       //   lang = 'en';
       // } else lang = 'ru';
+      console.log(`lang: ${lang}`);
       getTranslate(lang);
       changeClassActive('lang', btn);
       localStorage.setItem('lang', lang);
