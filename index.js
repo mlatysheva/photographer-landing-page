@@ -1,6 +1,7 @@
 import i18Obj from './translate.js';
 let lang = '';
 let theme = '';
+
 if (localStorage.getItem('lang')) {
   lang = localStorage.getItem('lang');
 } else lang = 'Eng';
@@ -8,6 +9,7 @@ if (localStorage.getItem('lang')) {
 if (localStorage.getItem('theme')) {
   theme = localStorage.getItem('theme');
 } else theme = 'dark';
+console.log(`skills is : ${i18Obj.Rus.skills}`);
 
 setLocalStorage();
 changeThemOnLoad(theme);
