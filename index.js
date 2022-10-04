@@ -4,12 +4,12 @@ console.log(i18Obj);
 let lang = '';
 let theme = '';
 
-if (localStorage.getItem('lang')) {
-  lang = localStorage.getItem('lang');
+if (localStorage.getItem('portfolio_lang')) {
+  lang = localStorage.getItem('portfolio_lang');
 } else lang = 'eng';
 
-if (localStorage.getItem('theme')) {
-  theme = localStorage.getItem('theme');
+if (localStorage.getItem('portfolio_theme')) {
+  theme = localStorage.getItem('portfolio_theme');
 } else theme = 'dark';
 
 setLocalStorage();
@@ -103,7 +103,7 @@ function translate() {
       console.log(`lang is ${lang}`);
       getTranslate(lang);
       changeClassActive('lang', btn);
-      localStorage.setItem('lang', lang);
+      localStorage.setItem('portfolio_lang', lang);
     })
   })
 }
@@ -156,7 +156,7 @@ function changeThemeOnClick() {
       themeBtn.classList.add('active');
       theme = 'dark';
     }
-    localStorage.setItem('theme', theme);
+    localStorage.setItem('portfolio_theme', theme);
     changeTheme();
   })  
 }
@@ -164,17 +164,17 @@ function changeThemeOnClick() {
 changeThemeOnClick();
 
 function setLocalStorage() {
-  localStorage.setItem('lang', lang);
-  localStorage.setItem('theme', theme);
+  localStorage.setItem('portfolio_lang', lang);
+  localStorage.setItem('portfolio_theme', theme);
 }
 window.addEventListener('beforeunload', setLocalStorage);
 
 function getLocalStorage() {
-  if (localStorage.getItem('lang')) {
-    lang = localStorage.getItem('lang');
+  if (localStorage.getItem('portfolio_lang')) {
+    lang = localStorage.getItem('portfolio_lang');
   }
-  if (localStorage.getItem('theme')) {
-    theme = localStorage.getItem('theme');
+  if (localStorage.getItem('portfolio_theme')) {
+    theme = localStorage.getItem('portfolio_theme');
   }
 }
 window.addEventListener('load', getLocalStorage);
